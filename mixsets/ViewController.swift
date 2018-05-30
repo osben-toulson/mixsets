@@ -9,17 +9,15 @@
 import UIKit
 
 class ViewController: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+    
+    @IBOutlet weak var lblLabel: UILabel!
+    
+    @IBAction func buttonPressed(_ sender: UIButton) {
+    //sender is the object that called this method
+        _ = sender.title(for: .normal)
+        lblLabel.text = "You clicked the button"
+        
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
 
 }
 
